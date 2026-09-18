@@ -1,1 +1,1 @@
-ghfdryjhhgfffhjkhgfh,k
+le code source qui a pour extention .cpp devient un programme apres compilation et exercution du code donc peut importe le nom qu'on attribu a un code source cella ne modifira pas le resultat de code source
