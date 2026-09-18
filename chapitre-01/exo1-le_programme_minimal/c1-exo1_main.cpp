@@ -5,7 +5,7 @@ int main () {
 
     printf ( "YEMFO KENFACK CHRISTABELLE FORTUNE \n" ) ;
 
-    printf (" YAOUNDE \n")  ;
+    printf (" YAOUNDE ")  ;
 
     return 0;
 
