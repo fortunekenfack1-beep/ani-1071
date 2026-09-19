@@ -1,5 +1,4 @@
-int calculer () ;
 int main () {
-
-return calculer () ; 
+int x ;
+return 0 ; 
 }
