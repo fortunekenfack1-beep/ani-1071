@@ -1,0 +1,2 @@
+en utilisant la commande clang++ -c c1-exo7_main.cpp le programme compile normalement mais lors de l'execution cela affiche :  .
+cannot execute binary file: Exec format error cela signifie que le systeme reconnait un fichier binaire , mais que son format n'est pas celui d'un programme executable .cela est du au fait que l'edition de liens n'a pas eu lieu car avec -c je me suis arrete avant edition de lien .
