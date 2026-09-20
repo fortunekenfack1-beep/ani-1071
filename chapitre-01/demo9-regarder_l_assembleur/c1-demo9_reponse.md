@@ -6,4 +6,5 @@ nous avons creer un fichier appeler bonjour.s  reperer ces differents parties
 * l'etiquette main : main:
 * l'appel a printf : callq	__mingw_printf
 * la valeur de retour : xorl	%eax, %eax
-  le fichier bonjour.s represente l'assembleur lisible.
+
+ le fichier bonjour.s represente l'assembleur lisible.
