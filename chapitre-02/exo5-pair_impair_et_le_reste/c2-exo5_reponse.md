@@ -21,6 +21,10 @@ int main () {
         } else {
             printf(" & le nombre n'est pas multiple de 3") ;
         }
+      return 0 ;  
+}
+
+
 ```
 nous avons pu avoir un programme respectant les normes de l'exercice en testant avec les valeurs demander nous obtenons
 ```
@@ -47,6 +51,4 @@ le nombre est impair & le nombre est positif & le nombre n'est pas multiple de 3
 en conclusion l'utilisation de plusieur if rend notre raisonnement plus visible et plusieurs resultats sur une meme ligne
 
 
-        return 0 ;
-    
-}
+  
