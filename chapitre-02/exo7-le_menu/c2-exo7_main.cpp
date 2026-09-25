@@ -9,7 +9,6 @@ int main () {
     switch(menu) {
         case 1 : 
             printf("nouvelle partie\n") ;
-            break ;
         case 2 : 
             printf("charger une partie\n") ;
             break ;
