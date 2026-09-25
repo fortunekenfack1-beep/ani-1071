@@ -7,7 +7,7 @@ int main () {
     for(y=-r ; y<=r ; y++){
         for(x=-r  ; x<=r ; x++){
             if(x*x + y*y<= r*r){
-                printf("##") ;
+                printf("#") ;
             } else {
                 printf("  ") ;
             }
