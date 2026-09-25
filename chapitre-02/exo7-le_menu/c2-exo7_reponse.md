@@ -13,4 +13,5 @@ $ ./prog
 nouvelle partie
 charger une partie
 ```
-on observe que cela renvoie 02 instructions car le break arrete instructions en cours et passe a la suivante
+on observe que 
+le résultat est ramène les options sur une réponse. car break permet de fermer le switch ainsi passé en ligne en sortant du switch 
