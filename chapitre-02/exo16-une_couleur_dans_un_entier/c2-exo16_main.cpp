@@ -11,7 +11,7 @@ int main () {
     printf("bleu : %u\n" , bleu) ;
     printf("alpha : %u\n" , alpha) ;
     unsigned int recomposee = (rouge << 24) | (vert << 16) | (bleu << 8) | alpha ;
-    printf("couleur recomposée : %08X\n" , recomposee);
+    printf("couleur recomposee : %08X\n" , recomposee);
     unsigned int rougesombre = rouge/2 ;
     unsigned int vertsombre = vert/2 ;
     unsigned int bleusombre = bleu/2 ;
