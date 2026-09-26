@@ -4,7 +4,7 @@ int main () {
     double p=100;
     double tmp=0.0;
     double dt ;
-     dt= 1 ;
+     dt= 0.01 ;
     while(p>0){
         
         v=v+(9.8*dt) ;
