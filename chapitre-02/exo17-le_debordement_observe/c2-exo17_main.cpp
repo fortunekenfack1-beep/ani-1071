@@ -9,6 +9,7 @@ int main () {
         printf("le nombre devient negatif au bout de %d iterations\n", cmpt);
     }else if(x==0){
         printf("le nombre devient nul au bout de %d iterations\n", cmpt);
+        break ;
     }else{
         printf(" ") ;
     }
