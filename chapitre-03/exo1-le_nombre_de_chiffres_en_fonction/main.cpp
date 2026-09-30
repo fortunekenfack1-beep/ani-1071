@@ -1,8 +1,10 @@
 #include <iostream>
-int nombreDechiffres(int a );
+int nombreDeChiffres(int a );
 
-int nombreDechiffres(int a ){ 
-    if (a<0){ a = -(unsigned long long )a ;} 
+int nombreDeChiffres(int a){ 
+    if (a<0) {
+     a = -(unsigned long long )a ;
+    } 
         return 1 ;   
     } 
      int cmpt =0 ;
@@ -19,7 +21,7 @@ int main (){
      bool vide=true;
     
     while(std::cin>>a) {
-std::cout<<nombreDechiffres(a)<<std::endl ;
+std::cout<<nombreDeChiffres(a)<<std::endl ;
 vide= false ;
 }
 if(vide) {
