@@ -1,0 +1,9 @@
+les 03 relevés sans tableau
+essai 1 : 43174
+essai 2 : 43201
+essai 3 : 43197
+
+les 03 relevés avec tableau
+essai 1 : 511
+essai 2 : 512
+essai 3 : 512
