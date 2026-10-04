@@ -1,0 +1,4 @@
+Ce que j'ai mis dans le .h : uniquement les trois declarations double aireRectangle(double, double);
+double aireDisque(double); double aireTriangle(double , double); entourer de la garde #ifndef AIRE_H
+#define AIRE_H ,  #endif . aucune declaration et aucun code executable . le .h dit seulemeny quelles fonctions existent et quels types il renvoit
+ce qui se passe si j'enleve la garde  
