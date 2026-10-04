@@ -1,0 +1,8 @@
+     Mes six mesures ne sont pas egales , en effet sans tableaux les mesures de la profondeur sont plus grande et varies legerement apres
+chaque execution . avec tableau , la profondeur est limiter , plus petit et cela ne foire pas la pile or sans tableau foire le pile
+et l'execution s'arrete brusquement .
+
+        Mon tableau change la profondeur car le nombre de variable local diminu le cadre et la fonction descend moins.
+        
+          je retiens qu'une fonction recusirve serieuse appel a chaque fois la meme fonctions , s'arrete difficilement et reduit prend bequcoup d'espace dans 
+de stockage des nombres (la pile meurt car les resultat recu depasse l'espace reserver). 
