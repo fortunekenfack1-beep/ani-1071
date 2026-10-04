@@ -1,5 +1,11 @@
-  Mes six releves montre que la vitesse et le position s'accroit normalement  avec l'augmentation du temps, ceci permet une bonne execution du programme
-  la position n'appel pas la vitesse car dans la formule de la position il demande uniquement la vitesse initiale et non la vitesse a un instant t donner par 
-la fonction d'ou l'absence de vitesse dans position
-  Avec une fonction pure le determinisme est assuree c'est a dire que le resultat ne depend pas des parametres , pas de la saisir ni meme des variables globale et 
-evite l'effet de bord donc elle ne modifie rien en dehors d'elle meme
+             six releves montre que la vitesse et le position s'accroit normalement  avec l'augmentation du temps, ceci permet une bonne execution du programme .
+lorsque le te,ps avance , la vitesse est multiplier par 2 a chaque fois ce qui est normal car avec une acceleration constante la valeur de la vitesse 
+evolu en doublant le temps par contre la position evolu de en mettant le temps au carre a chaque instant t donner.
+
+            La position n'appel pas la vitesse car dans la formule de la position il demande uniquement la vitesse initiale et non la vitesse a un instant t donner par 
+la fonction d'ou l'absence de vitesse dans position . utiliser la vitesse en un temps t different de 0 serait faux .cela evite
+egalement qu'une errMeseur dans l'une se propage dans l'autre c'est la raison pour laquel les fonctions sont totalement  independante.
+
+            Avec une fonction pure le determinisme est assuree c'est a dire que la fonction ne depend pas des variables globale mais   depend pas uniquement de ses  parametres ,
+aussi la fonction pure garantie l'absence de l'effet de bord:elle ne modifie rien en dehors d'elle meme et ne garde aucun etat entre
+deux appels.
