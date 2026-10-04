@@ -1,0 +1,5 @@
+Mes six releves montre que la vitesse et le position s'accroit normalement  avec l'augmentation du temps, ceci permet une bonne execution du programme
+la position n'appel pas la vitesse car dans la formule de la position il demande uniquement la vitesse initiale et non la vitesse a un instant t donner par 
+la fonction d'ou l'absence de vitesse dans position
+avec une fonction pure le determinisme est assuree c'est a dire que le resultat ne depend pas des parametres , pas de la saisir ni meme des variables globale et 
+evite l'effet de bord donc elle ne modifie rien en dehors d'elle meme
