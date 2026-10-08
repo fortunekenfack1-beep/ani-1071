@@ -21,7 +21,7 @@ if(n==0){
     std::cout<<"AUCUN\n";
 }else{ 
 for(int i=0 ; i < n ; i++){
-    std::cout<< t[i] <<"\n ";
+    std::cout<< t[i] <<"\n";
 }
 }
 return 0;
