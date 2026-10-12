@@ -1,0 +1,10 @@
+    Le calcul de mon indice : notre carte est range ligne par ligne dans un seul tableau a une seule dimention . chaque
+ligne contient une largeur cases , donc que pour arriver au debut de la ligne y , on saute y*largeur case , on avance 
+de x . c'est le cas de notre largeur qui est 12 , la tuile(3 , 2) a pour indice 12*2+3= 27 . ce qui sera valabre pour toute autre
+valeur de largeur .
+    Pourquoi un seul tableau et pas un tableau de tableaux : un seul tableau est une zone continue en memoire , simple a remplir
+ et a parcourir avec une seule boucle ; on ne passe qu'un seul tableau et une largeur aux fonctions , au lieu de gerer plusieurs
+ tableau de tailles . c'est la façon dont les cartes de jeu sont rangées en pratique, avec ce meme calcul d'indice.
+    Ce qui se passe si je confonds largeur et hauteur: les lignes se decoupent au mauvais endroit , donc la carte s'affiche de travers
+sur une carte non carrée , comme la mienne , l'indice peut depasser la taille du tableau , le programme lit alors hors limites , sans
+message d'erreur
