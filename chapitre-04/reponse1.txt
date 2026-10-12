@@ -1,0 +1,17 @@
+Mes douze mesures :
+j'ai compiler les deux dispositions avec les meme drapeaux (-o2) . Moyennes sur trois essais : structures , position : 23393 us , structures , vie : 14261 us ; paralleles,
+ position : 9662.66 , paralleles , vie : 3877.66 . les trois essais d'un meme cas sont prochesl'un de l'autre . le cas le plus rapide est paralleles. sur 
+ la position , les structures sont 2 fois plus lentes que les tableaux paralleles . sur la vie elles sont  , 3 fois plus lentes.
+ou l'ecart est le plus grand , et pourquoi : l'ecart est plus grand sur la boucle de vie .le 
+preprocesseur ne lit pas la memeoire case par case : il charge des blocs d'entiers appeles lignes de cache , dans un petit espace tres rapide .avec
+le tableau de structures , chaque bloc contient la duree de vie mais aussi x , y ,vx , vy et la couleur
+dont la boucle de vie n'a pas besoin . une grande partie du cache est donc gaspillee et il  faut charger
+beaucoup plus de blocs . avec le tableau parallele de la vie , un bloc ne contient que des durees de vie : tout ce 
+qui entre dans le cache est utile , donc il y a moins de blocs a charger .Sur la boucle de position , on utilise quatre champs sur six , doncla structure gaspille peu et l'ecart 
+est plus faible
+quand je choisirais quand meme le tableau de structures :
+je choisirais la structure quand le code utilise tous les champs d'une particule ensemble , comme 
+comme dans ma boucles de position , car tout est alors au meme endroit et rien n'est gaspille . je la choisirais aussi
+quand je deplace , copie , trie ou siupprime une particule entier : avec une structure c'est une seule operation , alors qu'avec les tableaux 
+paralleles il faut modifier six tableaux . enfin , quand le nombre d'elements est petit ou que la structure est plussimple a lire et a maintenir . le bon choix depend de ce 
+que la boucle lit .  
