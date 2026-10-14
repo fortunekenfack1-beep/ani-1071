@@ -1,0 +1,18 @@
+Predictions :
+1) pour la ligne <<  printf("%d %d \n" , *p , *q) ;>> : je prevois qu'elle affiche l'adresse memoire de a et b .
+2) pour la ligne <<  printf("%d %d \n" , a , b ) ;>> : je prevois qu'elle affiche les valeurs de a et b soit 9 et 9 .
+3) pour la ligne <<  printf("%d %d \n" , a , b ) ;>> : je prevois qu'elle affiche les valeurs 1 et 1 pour a et b .
+
+Obtenu :
+1) j'ai obtenu dans ce cas la valeur de a et b qui sont respectivement 5 et 9 
+2) j'ai obtenu ici les valeur de a et b qui sont a present 9 et 9 du a l'affectation de la valeur de b a celui de a
+3) j'ai obtenu ici la meme valeur de a mais b a changer de valeur et devient des a present 1
+
+Ecarts :
+1) fausse . l'element qui a tromper est & 
+2) vraie
+3) fausse . l'instruction qui a tromper est  "p=q ;"
+
+p = q :
+cette instruction change la valeur pointer par p , au depart p et q pointer chacun sa variable mais apres l'instruction , p et q pointent tous les deux sur b . elle
+ne modifie pas les adresses recpectifs de a et celui de b et ne modifie pas le contenu de de la case de a ni celui de b .
