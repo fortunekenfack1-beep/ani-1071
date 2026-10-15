@@ -1,0 +1,21 @@
+Sortie : 
+x = 2 y = 1
+x = 1 y = 2
+t = 4.2 s = 5.1
+u = B f = A
+
+A l'appel : 
+ echanger(&x , &y ) ;
+ echanger(x , y ) ;
+ Le premier appel passe des adresses avec & . celui qui lit main voit tout de suite que la fontion
+ peut modifierx et y , car elle recoit leur adresse. Le second appel ressemble a un passage par copie : rien dans main n'indique que x et y 
+ peuvent changer. il faut aller lire la signature de la fonction(int&) pour le savoir.
+
+ Ce qui change:
+ D'une version a l'autre ,la signature change : int* contre int& , avec une etoile dansla fonction pour les pointeurs et aucune pour les references . 
+ l'appel change aussi : & devant les variables pour les pointeurs , rien pour les references . d'un type a l'autre (int , double , char) , seul le type
+ des parametres et de tmp change , ainsi que le format d'affichage.
+
+ Ce qui reste identique : le principe . on sauvegarde de la premiere valeur dans tmp , on copie la seconde dans la premiere , puis tmp dans la seconde .
+  Dans tous les cas , ce sont les variables de main qui sont modifiées , pas des copies .
+
