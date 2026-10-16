@@ -1,0 +1,13 @@
+Integrale:  sin 0..3.14159 = 1.999998351 ;  carre 0..1 = 0.3328335
+Derivée :  sin en 0  = 1
+
+Zero :  x*x-2 entre 1 et 2 = 1.414213562
+
+Arret : la boucle de zero fait exactement 100 tours , sans jamais tester f(m) == 0 . elle s'arrete
+donc toujours , meme si f(m) ne tombe jamais pile sur zero . chaque tour divise l'intervale en deux.
+apres 100 tours , il est minuscule . L'ecart avec sqrt(2) est 2.220446049e-16 , de l'ordre de 1e-16 ou nul .
+
+Sans pointeur : si integrale choississait la fonction par un numero , avecun switch , il faudrait rouvrir 
+l'integrale pour ajouter une case a chaque fonction nouvelle. il faudrait aussi donner un numero a cette 
+quatrieme fonction et le faire connaitre a l'appelant. avec un pointeur , integrale ne change pas , on lui passe simplement
+le nom de la nouvelle fonction.
