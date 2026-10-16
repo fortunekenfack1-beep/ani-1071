@@ -1,0 +1,43 @@
+a:
+- pour *a = 5 ; , le compilateur affiche:
+troisconst.cpp:7:4: error: read-only variable is not assignable
+   7 | *a = 5 ;
+      | ~~ ^
+- pour a= &y ; , est acceptee mais le compilateur affiche un avertissement:
+/troisconst.cpp:4:12: warning: variable 'a' set but not used
+[-Wunused-but-set-variable]
+4 | const int* a = &x ;
+    |            ^
+1 warning generated.
+
+b:
+- pour  *b = 5  , le compilateur accepte 
+- pour b=&y , le compilateur affiche 
+ const-qualified type 'int *const'
+   12 | b= &y ;
+      | ~^
+troisconst.cpp:6:12: note: variable 'b' declared const here
+    6 | int* const b = &x ;
+      | ~~~~~~~~~~~^~~~~~
+1 error generated.
+
+c: 
+-pour *c=5 , le compilateur affiche 
+troisconst.cpp:13:4: error: read-only variable is not assignable
+   13 | *c = 5 ;
+      | ~~ ^
+1 error generated.
+- pour c=&y ,le compilateur affiche
+troisconst.cpp:7:18: note: variable 'c' declared const here
+    7 | const int* const c = &x ;
+      | ~~~~~~~~~~~~~~~~~^~~~~~
+1 error generated.
+
+Regle :
+Un const placé avant l'étoile (const int*) protege la variable désignée : on ne peut pas la 
+modifier a travers ce pointeur (*a = 5  est refusée) , mais le pointeur peut etre déplacé vers une 
+autre variable ( a= &y est acceptee).
+Un const placé apres l'étoile ( int* const) protege le pointeur lui-meme : il doit toujours designer
+la meme variable et ne peut pas etre deplace ( b =&y refusee) , mais on peut modifier la variable designee à
+travers lui(*b = 5 est acceptee)
+Avec const des deux cotes (const int* const c ) , les deux sont protegés : on ne peut ni ecrire à travers c , ni le deplacer. 

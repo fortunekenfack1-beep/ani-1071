@@ -1,0 +1,18 @@
+deplier :
+ i= 0 largeur= 40 -> x = 0, y = 0
+ i= 39 largeur= 40 -> x = 39, y = 0
+ i= 40 largeur= 40 -> x = 0, y = 1
+ i= 85 largeur= 40 -> x = 5, y = 2
+
+ minMax :
+minMax { 12 , 7 , 19 , 3 , 15} -> min = 3  max = 19
+minMax {-4, -9 , -1} -> min = -9  max = -4
+
+diviser :
+ diviser 17 5 -> rendu = true  quotient =3  reste = 2
+ diviser 20 4 -> rendu = true  quotient =5  reste = 0
+
+ Par zero :
+a=10 , b=0 -> rendu= false
+avant : quotient= -999 reste = -999
+apres : quotient= -999 reste = -999
