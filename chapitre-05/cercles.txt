@@ -1,0 +1,43 @@
+30 x 10 :
+                  
+               #              
+             #####            
+            #######           
+            #######           
+           #########          
+            #######           
+            #######           
+             #####            
+               #  
+80 x 24 :
+               #                                       
+                                    #########                                   
+                                  #############                                 
+                                 ###############                                
+                                #################                               
+                               ###################                              
+                               ###################                              
+                              #####################                             
+                              #####################                             
+                              #####################                             
+                              #####################                             
+                             #######################                            
+                              #####################                             
+                              #####################                             
+                              #####################                             
+                              #####################                             
+                               ###################                              
+                               ###################                              
+                                #################                               
+                                 ###############                                
+                                  #############                                 
+                                    #########                                   
+                                        #                                       
+
+Qui possede :
+creerImage reserve la memoire avec new char[l * h] , mais elle ne la garde pas 
+: elle rend l'adresse à main. c'est main qui possede chaque image.la petite 
+image(30 x 10) , pointee par petite , est rendue par detruireImage(petite) à la ligne 
+54 de image.cpp . La grande image(80 x 24) , pointee par grande , est rendue par 
+detruireImage(grande) à la ligne 59 . detruireImage appelle delete[] une seule fois 
+pour changer image.            
