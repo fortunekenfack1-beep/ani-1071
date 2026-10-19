@@ -1,0 +1,21 @@
+Sortie : 
+somme = 56
+maximum = 19
+ avant:
+ 1 2 3 4 5
+ apres:
+  5  4  3  2  1
+longueur bonjour= 7 , strlen = 7
+longueur Yaounde= 8 , strlen = 8
+
+Yaoundé : 
+longueur rend 8 , alors que le mot a 7 lettres . longeur compte des char , donc des 
+octets , jusqu'au caractere de code zero . le fichier est enregistrer en UTF-8 , où 
+la letre é occupe 2 octets , et les 5 autres lettres 1 octets chacune : 6+2 =8 .strlen 
+compte de la meme facon et reng egalement 8.
+
+Pourquoi pas const :
+cont int* interdit d'ecrire dans les cases visées par le pointeur.or inverser modifie le 
+tableau sur place : à chaque échange elle ecrit dans *debut et dans *fin .avec un const int* , 
+ces écritues ne compileraient pas. somme et maximum , elles , ne font que lire les cases, donc const 
+leur convient.

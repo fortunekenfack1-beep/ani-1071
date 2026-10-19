@@ -1,0 +1,14 @@
+Fuite:
+sans outil: le programme affiche de 0 a 999 , le programme termine normalement.
+avec outil: la compilation avec -fsanitize=address echoue a l'edition de liens: ld ne trouve pas libclang_rt.asan_dynamic_runtime_thunk.a ; puis clang++:  linker command failed with exit code 1 (use -v to see invocation) , donc aucun rapport .
+
+Pendant : 
+sans outil :sur la ligne apres , la valeur reste intact et le programme a continue normalement .
+avec outil : la compilation avec -fsanitize=address echoue a l'edition de liens: ld ne trouve pas libclang_rt.asan_dynamic_runtime_thunk.a ; puis clang++:  linker command failed with exit code 1 (use -v to see invocation) , donc aucun rapport .
+
+Double :
+sans outil: ce programme au second delete[] s'arrete brusquement et n'affiche rien 
+avec outil: la compilation avec -fsanitize=address echoue a l'edition de liens: ld ne trouve pas libclang_rt.asan_dynamic_runtime_thunk.a ; puis clang++:  linker command failed with exit code 1 (use -v to see invocation) , donc aucun rapport .
+
+La pire:
+la faute de double me parrait la plus dangeureuse , parceque le fait que le programme s'arrete brusquement peut faire bloquer un ordinateur voir l'empeche de fonctionner normalement .
