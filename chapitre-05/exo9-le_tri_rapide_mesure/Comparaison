@@ -1,0 +1,6 @@
+aléatoire : 
+100 cases : rapide = 576, sélection = 4950
+1000 cases : rapide = 10109, sélection = 499500
+10000 cases : rapide = 148888, sélection = 49995000
+100000 cases : rapide = 1965644, sélection = 4999950000
+déjà trié: 
