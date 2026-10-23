@@ -1,0 +1,8 @@
+V0 : 7.67203
+1 / 120 : 2.96808
+1 / 30 : 2.87349
+Mon pas  1 / 1000 : 2.99616
+L'ecart vient : de la simulation , pas de la formule . la formule donne v0 = 7.672 m/s , qui produit exactement 3 m dans mouvement  continu , et v0 est la
+meme dans les trois mesures. pourtant la hauteur mesuree change avec le pas :2.873 m pour 1/30 ,    2.968 m pour 1/2 , 2.996 m pour 1/1000 , donc l'ecart avec 3 
+passe d'environ 13 cm a 4mm . il diminue en meme temps que le pas , a pres proportionnellement , ce qui prouve que la cause est le pas de temps fini de la simulation, 
+qui avance par petits sauts et rate le sommet exact de la trajectoire.

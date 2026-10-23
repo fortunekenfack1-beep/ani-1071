@@ -1,0 +1,35 @@
+-O0 :
+Total = 500000500000
+. duree boucle = 0.003295 s
+. duree boucle = 0.003132 s
+. duree boucle = 0.015662 s
+
+-O2 :
+Total = 500000500000
+.duree boucle = 0.000000 s
+.duree boucle = 0.000000 s
+.duree boucle = 0.000001 s
+
+-Un printf :
+.lancement en -O0 :
+
+printf 1 : 0.000868 s
+printf 2 : 0.001257 s
+printf 3 : 0.001962 s
+printf 4 : 0.001316 s
+printf 5 : 0.001417 s
+
+.lancement en -O2 :
+printf 1 : 0.002005 s
+printf 2 : 0.016423 s
+printf 3 : 0.003273 s
+printf 4 : 0.003625 s
+printf 5 : 0.001499 s
+
+-Le plus cher : 
+duree moyenne de la boucle en -O0 est 0.007363 
+duree moyenne du printf est 0.001364 
+nous observons donc que le temps d'execution d'un printf est inferieur a celui d'une boucle et on a apres calcul vu que le temps d'execution d'une boucle est sensiblement egale a 5 fois le temps d'un printf
+ce que optimisation a fait :
+duree moyenne en -O0 est 0.007363 et celui en -O2 est 3.33333333e-7  , et le total reste 500000500000 , le compilateur semble avoir
+remplace la boucle par le resultat calculer d'avance , ou l'avoir supprimer au niveau de -O2 au lieu d'executer un million d'additions.

@@ -1,0 +1,21 @@
+Les quatres :
+length({3 , 4}) = 5
+dot({1 , 0 } , {0 , 1}) = 0
+rotation({1 , 0 } , radians(90))= { 1.6155445744325867e-15, 1 }
+reflect({1 ,-1 }, {0 , 1}) = { 1, 1 }
+
+Mes essais:
+ add({1, 2} , {3 , 4}) = { 4, 6 }
+ sub({1, 2} , {3 , 4}) = { -2, -2 }
+ scale({1, 2} , 3 ) = { 3, 6 }
+ normalize( {3 , 4}) = { 0.60000000000000009, 0.80000000000000004 }
+ lerp({0, 0} , {10 , 20} , 0.5) = { 5, 10 }
+ perp({1, 2} ) = { -2, 1 }
+
+Epsilon:
+rotate {1 , 0 } , radians(90) donne x = 1.6155445744325867e-15 et y = 1
+ j'ai choisi epsilon = 1.0000000000000001e-09 . j'ai garde 15 chiffres de pi : pi = 3.14159265358979.
+pourquoi : le resultat exact serait  {0 , 1} , mais pi n'est pas stocke exactement , et sin et cos sont calcules par approximation . le x n'est donc pas 0 mais un nombre minuscule , de l'ordre de epsilon = 1.0000000000000001e-09 . x==0 echouerait . je compare donc avec fabs(valeur - attendu) <epsilon . Mon epsilon est beaucoup plus grand que cet ecart , donc le resultat juste est 
+accepte , mais il reste miniscule devant les  valeurs utilisees , donc une vraie faute de calcul serait detectee. 
+
+ 

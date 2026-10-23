@@ -1,0 +1,13 @@
+Prevu :
+depart 3 4 ; apres bougerCopie 3 4 ; apres bougerRef 4 4 apres  longueurRef 4 4
+Obtenu :
+depart 3 4 ; apres bougerCopie 3 4 ; apres bougerRef 4 4 apres  longueurRef 4 4 (longueur rendue :  5.65685)
+Message :
+copie.cpp:16:9: error: cannot assign to variable 'p' with const-qualified type 'const Vec2 &'
+copie.cpp:15:32: note: variable 'p' declared const here
+Pourquoi :
+bougerCopie recoit une copie de la structure : elle ajoute 1 au x de la copie , donc la variable de main rete a 3 4
+apres l'appel . bougerRef recoit la variable elle-meme(reference) : elle peut la modifier , et la mesure le prouvre , puisque p passe 
+de 3 4 a 4 4 . longeurRef recoit une reference constante : elle lit  p sans le modifier (p reste 4 4 et la longueur 5.65685 est rendue) , et Le
+compilateur refuse la ligne p.x = 0 avec l'erreur ci-dessus. pour une fonction qui ne fait que lire , const apporte donc deux choses : la garantie que la 
+variable ressort intacte , verifiee par le compilateur , et l'absence de copie , ce qui compte pour une grosse structure.

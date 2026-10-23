@@ -1,0 +1,17 @@
+Mesures :
+struct Vec2  , la taille prevue 16 ,  la taille mesure est 16 
+struct Particule , la taille prevue 40 ,  la taille mesure est 40
+struct A, la taille prevue 05 ,  la taille mesure est  8
+struct B , la taille prevue 10 ,  la taille mesure est 24 
+struct C, la taille prevue 10 ,  la taille mesure est 24 
+struct Particule 2, la taille prevue 48 ,  la taille mesure est 48 
+
+
+Ordres essayes :
+vie , etat , position , vitesse : 48
+position , vitesse , vie , etat : 48
+position , vitesse , etat , vie : 48
+etat , vie , position , vitesse : 48 
+
+Regle : 
+LE COMPILATEUR place chaque membre a une adresse multiple de son alignement (1 pour char , 4 pour int , 8 pour double) , en inserant de octets vides avant lui , ce qui explique A(3 octets vides) , B(7 avant d , 7 apres e) et C(seulement 6 a la fin). la taille totale est ensuite arrondie a un multiple du plus grand alignement (8 ici) , donc les quatres ordre de la particule donnent 48 : 41 octets utiles arrondis a 48 , et aucun ordre ne peut faire mieux.
