@@ -1,0 +1,11 @@
+Attendu :
+10 secondes à 120 pas par seconde : 10 * 120 = 1200 appels a mettreAjour .
+
+Attendu courtes:
+Duree maximale d'une attente : 0.001 s ; tours : 19759 ; appels 1199
+Attendu longues:
+Duree maximale d'une attente : 0.05 s ; tours : 401 ; appels 1199
+Pourquoi :
+les appels ne suivent pas les tours , parceque mettreAjour n'est appelee que lorsque l'accumulateur contient une tranche 
+entiere de PAS : le nombres d'appels depend du temps ecoule (10s) , pas du nombre de toursde la grande boucle . avec des attentes courtes , un tour dure bien moins qu'un PAS et ne declenche presque jamais de mise a jour ; avec des attentes longues , un tour dure plusieurs PAS et la boucle interne en rattrape plusieurs d'un coup .
+c'est pourquoi les tours passent de 19759  a 401 alors que les appels restent proches de 1199 . l'ecart reste avec 1199  vient de deux choses : l'accumulateur garde la fin une fraction de PAS non consomme (moins d'un et l' appel) et la derniere attenten'est pas comptee , car le temps est mesuree au debut de chaque tours , avant son attente ; cet ecart est donc faible avec les attentes courtes(0 ou 1 appel) et plus visible avec les attentes longues (quelques appels).
