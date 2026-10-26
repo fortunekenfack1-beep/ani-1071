@@ -1,4 +1,4 @@
-En executant le programme on a 
+En executant le programme on a :
 ```
 chris@DESKTOP-RSAB6V8 MSYS /c/Users/chris/ani-1071/chapitre-02
 $ clang++ c2-demo1_main.cpp -o prog
