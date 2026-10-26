@@ -1,0 +1,11 @@
+Sortie :
+(la sortie de ./prog)
+
+Vivants :
+avant liberer = 3, apres liberer = 0 
+
+Par valeur :
+Inverser liste 1 noeud : 7 
+
+Pourquoi :
+Un Noeud qui contiendrait un Noeud entier devrait contenir un autre Noeud, et ainsi de suite : sa taille serait infinie, donc le compilateur ne peut pas la calculer. Un Noeud* n'est qu'une adresse, de taille fixe, quelle que soit la liste qu'elle désigne.
