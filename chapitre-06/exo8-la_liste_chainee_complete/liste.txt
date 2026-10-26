@@ -1,5 +1,24 @@
 Sortie :
-(la sortie de ./prog)
+```
+ajouterEnQueue 10 sur liste vide : 10
+ajouterEnQueue 20 : 10 -> 20
+ajouterEnQueue 30 : 10 -> 20 -> 30
+ajouterEnTete 5 : 5 -> 10 -> 20 -> 30
+ajouterEnQueue 40 : 5 -> 10 -> 20 -> 30 -> 40
+compter = 5
+contient(20) = true
+contient(99) = false
+retirer 5 (tete) : 10 -> 20 -> 30 -> 40
+retirer 30 (milieu) : 10 -> 20 -> 40
+retirer 99 (absent) : 10 -> 20 -> 40
+inverser : 40 -> 20 -> 10
+vivants avant liberer = 3
+vivants apres liberer = 0
+inverser liste vide : (vide)
+inverser liste 1 noeud : 7
+ajouterEnQueue 8 sur liste 1 noeud : 7 -> 8
+vivants final = 0
+```
 
 Vivants :
 avant liberer = 3, apres liberer = 0 
