@@ -1,0 +1,11 @@
+Sortie :
+(les dix lignes de traitement)
+
+Tailles :
+sizeof(Evenement) = 16, sizeof(e.touche) = 2, sizeof(e.souris) = 12, sizeof(e.redimension) = 8 
+
+Explication :
+Octet 0 : le champ type (un unsigned char). Octets 1 à 3 : du remplissage, car les int de l'union doivent commencer à une adresse multiple de 4. Octets 4 à 15 : l'union, qui prend la taille de son plus grand membre, souris (3 int = 12 octets). touche et redimension partagent les mêmes octets. Total : 1 + 3 + 12 = 16.
+
+Lecture fautive :
+souris.x lu = 321 en décimal, 141 en hexadécimal. Les octets 4 et 5 viennent de touche.code et touche.pressee ; les octets 6 et 7 n'ont jamais été écrits et valent 0 grâce au memset. Sur ma machine , la valeur est code + 256 × pressee. Cette lecture n'est pas garantie par le langage.
