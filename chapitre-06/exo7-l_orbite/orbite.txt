@@ -1,1 +1,17 @@
 
+Pas choisi :
+dt = 0.5. Un tour dure 2 × pi × 100 / 1, soit environ 628 unités de temps, donc environ 1257 pas. Les 10000 pas font environ 8 tours.
+
+Distances :
+(vos 20 lignes : numéro du pas, distance explicite, distance semi-implicite)
+(colonnes : numéro du pas, distance de la planète explicite, distance de la planète semi-implicite)
+
+Pas dix fois plus petit :
+dt = 0.05, dernier pas : explicite 100.570714 , semi-implicite 100.023981
+
+Dessin :
+(l'image copiée depuis le terminal)
+(E : méthode explicite, S : semi-implicite. La première ligne de l'image est vide.)
+
+Laquelle tient :
+La méthode semi-implicite garde son orbite, il oscille entre 99.77 et 100.25. La méthode explicite: s'éloigne de plus en plus , par exemple de 102.01  à 134.62 . Avec le pas dix fois plus petit, l'écart se réduit
