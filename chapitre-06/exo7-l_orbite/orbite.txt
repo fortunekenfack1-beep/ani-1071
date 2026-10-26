@@ -3,14 +3,33 @@ Pas choisi :
 dt = 0.5. Un tour dure 2 × pi × 100 / 1, soit environ 628 unités de temps, donc environ 1257 pas. Les 10000 pas font environ 8 tours.
 
 Distances :
-(vos 20 lignes : numéro du pas, distance explicite, distance semi-implicite)
+500 102.017458 99.853539
+1000 105.605656 100.240500
+1500 106.379377 99.766186
+2000 109.150785 100.139236
+2500 111.997026 100.016618
+3000 112.390258 99.840440
+3500 115.137458 100.244782
+4000 117.888463 99.772378
+4500 118.060035 100.125094
+5000 120.111985 100.033165
+5500 123.287075 99.828053
+6000 123.746680 100.247993
+6500 124.446107 99.779587
+7000 127.658870 100.110403
+7500 129.477930 100.049568
+8000 129.207476 99.816433
+8500 130.831841 100.250117
+9000 134.020121 99.787781
+9500 135.003134 100.095229
+10000 134.620624 100.065755
 (colonnes : numéro du pas, distance de la planète explicite, distance de la planète semi-implicite)
 
 Pas dix fois plus petit :
 dt = 0.05, dernier pas : explicite 100.570714 , semi-implicite 100.023981
 
 Dessin :
-(l'image copiée depuis le terminal)
+
 (E : méthode explicite, S : semi-implicite. La première ligne de l'image est vide.)
 
 Laquelle tient :
