@@ -1,0 +1,31 @@
+Messages:
+pile.cpp:56:8: error: 'nombre' is a private member of 'Pile'
+   56 |      p.nombre = -5;
+      |        ^
+pile.cpp:7:9: note: declared private here
+    7 |     int nombre;                          
+      |         ^
+pile.cpp:57:8: error: 'tete' is a private member of 'File'
+   57 |      f.tete = 7;
+      |        ^
+pile.cpp:25:9: note: declared private here
+   25 |     int tete;                            
+      |         ^
+2 errors generated.
+
+Essais:
+Pile apres 150 empiler : taille = 100, pleine = 1
+Pile apres 200 depiler : taille = 0, vide = 1
+File apres 150 enfiler : taille = 100, pleine = 1
+File apres 30 defiler : taille = 70
+File apres 50 enfiler de plus : taille = 100, pleine = 1
+
+Invariant de la file:
+ 0 <= nombre <= CAPACITE, 0 <= tete < CAPACITE, 0 <= queue < CAPACITE,  queue == (tete + nombre) % CAPACITE
+la file est circulaire : queue peut etre plus petit que tet. quand elle a fait le tour du tableau c'est pour cela que l'invariant passe par le modulo et non par une comparaison queue>= tete. il tint parce que
+les membres sont prives : seuls enfiler et defiler les modifient , et chacune preserve ces proprietes . sur une file pleine , enfiler ne fait rien .sur une file vide , defiler rend -1 sans rien changer , et ce -1 n'est pas une valeur rangee
+
+
+Struct:
+avec struct pile et private : , p.nombre = -5 ; est refuse , comme avec class . sans private : c'est accepte , car dans une struct tout est public par defaut.on ne conclit que struct et class ne different que
+par l'acces par defaut : ce n'est pas le mot choisir qui ferme la structure c'est private.

@@ -1,0 +1,29 @@
+Essais:
+Essais :
+c = (r=200, g=100, b=50, a=255)
+d = (r=100, g=200, b=250, a=128)
+c * 0.5 = (r=100, g=50, b=25, a=255)
+c * 2.0 = (r=255, g=200, b=100, a=255)
+c + d = (r=255, g=255, b=255, a=255)
+lerp(c, d, 0) = (r=200, g=100, b=50, a=255)
+lerp(c, d, 0.5) = (r=150, g=150, b=150, a=192)
+lerp(c, d, 1) = (r=100, g=200, b=250, a=128)
+
+
+Sans saturer :unsigned char x = 200 + 200 -> 14
+
+
+Empaquetage :
+(255, 128, 0, 255) -> FF8000FF -> (255, 128, 0, 255) : ok
+(0, 0, 255, 128) -> 0000FF80 -> (0, 0, 255, 128) : ok
+(200, 100, 50, 255) -> C86432FF -> (200, 100, 50, 255) : ok
+(1, 2, 3, 4) -> 01020304 -> (1, 2, 3, 4) : ok
+(0, 0, 0, 0) -> 00000000 -> (0, 0, 0, 0) : ok
+0x12345678 -> r=12 g=34 b=56 a=78
+
+Message :
+couleur.cpp:56:27: warning: implicit conversion from 'int' to 'unsigned char' changes value from 400 to 144
+      [-Wconstant-conversion]
+   56 |     unsigned char x = 200 + 200;
+      |                   ~   ~~~~^~~~~
+1 warning generated.

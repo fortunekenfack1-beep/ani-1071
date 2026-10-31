@@ -1,0 +1,29 @@
+Boucle:
+essai 1 : 0.350056900 s
+total = 4999999950000000
+essai 2 : 0.351439700 s
+total = 4999999950000000
+essai 3 : 0.346049700 s
+total = 4999999950000000
+
+Le plus court :
+duree 1 : 0.000000200 s
+duree 2 : 0.000000300 s
+duree 3 : 0.000000300 s
+duree 4 : 0.000000300 s
+duree 5 : 0.000000300 s
+k.ecoule() = 0.000000300 s
+
+Message:
+chrono.cpp:44:6: error: 'this' argument to member function 'redemarrer' has type 'const Chrono', but function is not marked      const
+   44 |      k.redemarrer();                              
+      |      ^
+chrono.cpp:18:10: note: 'redemarrer' declared here
+   18 |     void redemarrer(){
+      |          ^
+1 error generated.
+
+Pourquoi:
+l'objet k est declare const , donc il prometde ne jamais changer. le compilateur n'autorise sur lui que
+le methodes marquees const . k.ecoule() passe , parceque ecoule est const . k.demarrer() est refuse , parceque redemarrer n'est
+pas const. le compilateur le verifie a la compilation , sans lancer le programme .c'est le role du const .

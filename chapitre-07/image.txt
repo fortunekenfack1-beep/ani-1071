@@ -1,0 +1,48 @@
+Vivantes:
+avant la boucle : 0
+tour 1 : 1
+tour 2 : 1
+tour 3 : 1
+tour 4 : 1
+tour 5 : 1
+tour 6 : 1
+tour 7 : 1
+tour 8 : 1
+tour 9 : 1
+tour 10 : 1
+apres la boucle : 0
+
+Dessin:
+##                                    ##
+ ###                                ### 
+   ###                            ###   
+     ###                        ###     
+        ##                    ##        
+          ##                ##          
+            ##            ##            
+              ##        ##              
+                ##    ##                
+                  ####                  
+                  ####                  
+                ##    ##                
+              ##        ##              
+            ##            ##            
+          ##                ##          
+        ##                    ##        
+     ###                        ###     
+   ###                            ###   
+ ###                                ### 
+##                                    ##
+
+Copie:
+image.cpp:88:19: error: call to deleted constructor of 'Image'
+   88 |             Image b = a;           
+      |                   ^   ~
+image.cpp:29:5: note: 'Image' has been explicitly marked deleted here
+   29 |     Image(const Image&) = delete;              
+      |     ^
+1 error generated.
+
+Pourquoi: sans =delete , Image b = a ; copierait seulement le pointeur pixels , donc a et b partegaient la meme rangee de pixels .
+a la fin de main , les deux destructeurs feraient delete[] sur la meme zone :
+double liberation , avec plantage ou corruption de la memoire.Avec = delete , compilateur refuse la copie zt ce bogue devient impossible

@@ -1,0 +1,36 @@
+Prevu:
+dans_main nait d'abord. ensuite la fonction: dans fonction nait , <<fin de la fonction>> , puis elle meurt .le bloc fait pareil avec dans_bloc.new_avec_delete
+nait puis meurt tout de suite au delete. dans le premier bloc , bloc2_premiere nait avant bloc2_seconde , mais elles meurent dans l'ordre inverse:la seconde d'abord .enfin <<fin de main>> puis dans_main meurt.
+
+Sortie:
+dans_main nait
+dans_fonction nait
+fin de la fonction
+dans_fonction meurt
+dans_bloc nait
+fin du bloc 1
+dans_bloc meurt
+new_sans_delete nait
+new_avec_delete nait
+new_avec_delete meurt
+bloc2_premiere nait
+bloc2_seconde nait
+fin du bloc 2
+bloc2_seconde meurt
+bloc2_premiere meurt
+fin de main
+dans_main meurt
+
+
+Explication:
+Dans_main nait au debut de main et meurt a la toute fin , quand main se termine , car c'est une variable locale de main
+dans_fonction nait a l'appel de la fonction et meurt a la fin de la fonction , apres <<fin fonction>
+dans_bloc nait a l'entree du bloc et meurt a son accolade fermante
+new_sans_delete cree par new , elle vit sur le tas .aucun delete n'est appele , donc son destructeur ne s'execute jamais : il n'y a pas de ligne <<meurt>> , c'est une fuite de memeoire
+new_avec_delete nait au new et meurt immediatement au delete , qui appelle son destructeur  
+bloc2_premier et bloc2_seconde nees dans l'ordre premiere plus seconde ; elles meurent dans l'ordre inversz a la fin du bloc
+
+Appel a la main :
+en ajoutant m.~Trace(); avant le return , la sortie affiche dans_main meurt deux fois ;: une fois a l'appel manuel et une seconde fois a la fin de main, quand le destructeur est appele automatiquement . l'objet
+est detruit deux fois .c'est une faute : avec un simple printf c'est seulement bizqrre , mais si trace possedait de la memoire , le destructeur ferait deux delete[] sur la meme zone , donc une double liberation ,
+avec un plantage ou une corruption de la memoire.

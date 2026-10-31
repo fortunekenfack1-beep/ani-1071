@@ -1,0 +1,50 @@
+Messages : 
+
+defaut.cpp:10:7: error: no matching constructor for initialization of 'P'
+   10 |     P x ;
+      |       ^
+defaut.cpp:5:5: note: candidate constructor not viable: requires single argument
+      'v', but no arguments were provided
+    5 |     P(int v):a(v){}
+      |     ^ ~~~~~
+defaut.cpp:2:8: note: candidate constructor (the implicit copy constructor) not
+      viable: requires 1 argument, but 0 were provided
+    2 | struct P
+      |        ^
+defaut.cpp:2:8: note: candidate constructor (the implicit move constructor) not
+      viable: requires 1 argument, but 0 were provided
+    2 | struct P
+      |        ^
+defaut.cpp:11:7: error: no matching constructor for initialization of 'P[10]'
+   11 |     P t[10];
+      |       ^
+defaut.cpp:5:5: note: candidate constructor not viable: requires single argument
+      'v', but no arguments were provided
+    5 |     P(int v):a(v){}
+      |     ^ ~~~~~
+defaut.cpp:2:8: note: candidate constructor (the implicit copy constructor) not
+      viable: requires 1 argument, but 0 were provided
+    2 | struct P
+      |        ^
+defaut.cpp:2:8: note: candidate constructor (the implicit move constructor) not
+      viable: requires 1 argument, but 0 were provided
+    2 | struct P
+      |        ^
+2 errors generated.
+Avec a(0):
+ x.a = 0
+ Avec = default :
+
+defaut.cpp:12:7: warning: unused variable 't' [-Wunused-variable]
+   12 |     P t[10];
+      |       ^
+1 warning generated.
+x.a = 1
+x.a = 1
+x.a = 1
+Pourquoi:
+Les deux declaration Px et P t[10] ; ont ete refusees parce que P n'avait plus de constructeur sans parametre .Quandon n'ecrit
+aucun constructeur , le compilateur en fournit un automatiquement.mais des qu'on en ecrit un soi meme ; ici P(int v) , le compilateur
+ne genere plus celui la or P x ; ne donne aucune valeur , donc il faut un constructeur sans parametre . P t[10] ; en demande dix , un par case du tableau.
+Avec P() = default ; le constructeur sans parametre existe de nouveau ; mais il initialise pas a .P x ; laise donc a indetermine.lire x.a a un comportement indefini
+. j'ai lu  x.a=1 aux trois lancements.   

@@ -1,0 +1,53 @@
+Essais:
+Vec2() = (0, 0)
+Vec2(3, 4) = (3, 4)
+b.length() = 5
+b.dot(Vec2(1, 2)) = 11
+b.normalized() = (0.6, 0.8)
+Vec2().normalized() = (0, 0)
+c.normalize() puis c = (0.6, 0.8)
+b + Vec2(1, 1) = (4, 5)
+b - Vec2(1, 1) = (2, 3)
+-b = (-3, -4)
+b / 2.0 = (1.5, 2)
+b == Vec2(3, 4) : 1
+b != Vec2(3, 4) : 0
+b * 2.0 = (6, 8)
+2.0 * b = (6, 8)
+d += (2, 3) -> (3, 4)
+d -= (1, 1) -> (2, 3)
+d *= 3.0 -> (6, 9)
+e[0] = 1, e[1] = 2
+e[1] = 5.0 -> (1, 5)
+
+Chute:
+pas 1 : t = 0.1, p = (0.3, 9.9019), v = (3, -0.981)
+pas 2 : t = 0.2, p = (0.6, 9.7057), v = (3, -1.962)
+pas 3 : t = 0.3, p = (0.9, 9.4114), v = (3, -2.943)
+pas 4 : t = 0.4, p = (1.2, 9.019), v = (3, -3.924)
+pas 5 : t = 0.5, p = (1.5, 8.5285), v = (3, -4.905)
+pas 6 : t = 0.6, p = (1.8, 7.9399), v = (3, -5.886)
+pas 7 : t = 0.7, p = (2.1, 7.2532), v = (3, -6.867)
+pas 8 : t = 0.8, p = (2.4, 6.4684), v = (3, -7.848)
+pas 9 : t = 0.9, p = (2.7, 5.5855), v = (3, -8.829)
+pas 10 : t = 1, p = (3, 4.6045), v = (3, -9.81)
+pas 11 : t = 1.1, p = (3.3, 3.5254), v = (3, -10.791)
+pas 12 : t = 1.2, p = (3.6, 2.3482), v = (3, -11.772)
+pas 13 : t = 1.3, p = (3.9, 1.0729), v = (3, -12.753)
+pas 14 : t = 1.4, p = (4.2, -0.3005), v = (3, -13.734)
+
+Sol:
+instant de la formule : t = 1.42784
+premier pas avec p.y < 0 : pas 14, t = 1.4, p.y = -0.3005
+
+Messages:
+error.cpp:16:7: error: no viable overloaded '+='
+   16 |     a += b ;
+      |     ~ ^  ~
+error.cpp:17:8: error: invalid operands to binary expression ('double' and 'Vec2')
+   17 |     2.0*a ;
+      |     ~~~^~
+error.cpp:9:11: note: candidate function not viable: no known conversion from 'double' to 'Vec2' for 1st argument
+    9 |      Vec2 operator*(Vec2 v , double k) {
+      |           ^         ~~~~~~
+2 errors generated.
