@@ -1,28 +1,15 @@
 #include <iostream>
-int nombreDechiffres(int a );
-int nombreDechiffres(int a ){ 
-    if(a==0){
-        return 1 ;   
-    } 
-     int cmpt =0 ;
-     if (a<0){ a = -a ;} 
-while(a!=0){
-    a = a/10 ;
-   cmpt = cmpt +1 ;
- }
-return cmpt ;
-}
-int main (){
-    int a ;
-     bool vide=true;
-    while(std::cin>>a) {
-std::cout<<nombreDechiffres(a)<<std::endl ;
-vide= false ;
-}
-if(vide) {
-    std::cout<<"AUCUN \n";
-}
-}
+#include <vec2.h>
+int main () {
+    double d = 4 ;
+    ani ::  Vec2 a = { 1 , 2} ;
+    ani:: Vec2 u = { 3 , 4};
+    ani:: Vec2 c = ani:: add (a , u) ;
+    ani:: produit( a , u) ;
+    ani:: longueur(a);
+    std::cout <<"le produit est :"<< ani::produit(a , u)<<"\n";
+    std::cout <<"la longueur  est :"<< ani::longueur(a)<<"\n";
+    std::cout <<"la somme est : ("<< c.x << " , "<< c.y<<" )" <<"\n";
+    return 0 ;
     
-
-
+}

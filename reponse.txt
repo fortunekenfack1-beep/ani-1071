@@ -1,0 +1,17 @@
+ce que j'ai mis dans le .h et pourquoi :
+Dans vec2.h j'ai mis la garde d'inclusion , le namespace ani ,la structure Vec2 avec ses champs x et y  , et les prototypes de add , produit et longueur. je n'ai mis aucun corps de fonction , seulement les declarations.ainsi chaque fois que le compilateur compile vec2.cpp , il recopie cet entete grace a include<vec2.h>. un corps defini par le .h serait compiler plusieurs fois et l'editeur de liens afficherait multiple definition. les corps sont donc dans vec2.cpp 
+
+le message exact quand j'ai appele l'aide depuis main :
+══════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Compilation Error: main.cpp                                  ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════╣
+║ C:\Users\chris\ani-1071\chapitre-09\exo8-votre_projet_en_trois_fichiers_et_un_jenga\src\main ║
+║ .cpp:13:10: error: no type named 'carre' in namespace 'ani'                                  ║
+║    13 |     ani::carre(d);                                                                   ║
+║       |     ~~~~~^                                                                           ║
+║ 1 error generated.
+la fonction carre est dans un espace de noms anonyme de Vec2.cpp et n'est pas declarer dans le .h donc main ne peut pas le voir
+
+les deux lignes du .jenga que j'ai ajoutees :
+includedirs([" include "]) remplace l'option -I include de clang++ : elle indique ou chercher les en-tetes , donc #include<vec.h> est trouver
+files(["src/** .cpp]) remplace la liste des fichiers .cpp ecrit a la main dans la commande de compilation 
