@@ -11,17 +11,14 @@ int main(){
     for(int i = 0 ;i< n ; i++){
         std::cin >> event ;
         if(event == "BAS"){
-            std::cout<<event <<"\n";
             std::string touche ;
             std::cin>> touche ;
             touches.insert(touche);
         } else if ( event == "HAUT"){
-            std::cout<< event <<"\n";
             std::string touche ;
             std::cin>> touche ;
             touches.erase(touche); 
         } else if( event == "QUESTION") {
-            std::cout<< event <<"\n";
            std::string touche ;
           std::cin>> touche ;
          if( touches.count(touche) ) {
