@@ -19,13 +19,13 @@ int main(){
                          std::cout<< "modifie" <<"\n"; 
                  }else if ( event =="SAUVE"){
                      modifie = false ;
-                     std::cout<<" enregistre"<<"\n";
+                     std::cout<<"enregistre"<<"\n";
                  } else if (event == "FERMETURE"){
                      cmp_demande += 1 ;
                      if(modifie){
                          std::cout<<"fermeture refusee"<<"\n";
                      }else {
-                         std::cout<< " fermeture acceptee"<<"\n";
+                         std::cout<< "fermeture acceptee"<<"\n";
                          ferme = true ;
                      }
                  }
