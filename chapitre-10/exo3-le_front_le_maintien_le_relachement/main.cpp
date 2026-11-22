@@ -26,7 +26,7 @@ int main(){
         }
         avant = maintenant ;
     }
-    std::cout<<" APPUIS "<<cmp_app<<"\n";
+    std::cout<<"APPUIS "<<cmp_app<<"\n";
     std::cout<< "RELACHES "<<cm_rlc<<"\n";
     return 0 ;
       }
